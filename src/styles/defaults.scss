@@ -1,0 +1,15 @@
+// Set your colors
+$primary: #ad0e2d;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+$dark: #303644;
+$dark-invert: findColorInvert($dark);
+$background: #101721;
+$background-invert: findColorInvert($background);
+$gray: #777;
+$gray-invert: findColorInvert($gray);
+$red: #ff3860;
+$red-invert: findColorInvert($red);
+$green: #23d160;
+$green-invert: findColorInvert($green);
