@@ -1,68 +1,39 @@
 <template>
 <div>
-  <navbar />
-  <section class="hero is-large is-dark">
-    <div>
-      <particles>
-      </particles>
-    </div>
-    <div class="container">
-      <div class="hero-head">
-      </div>
-      <div class="hero-body">
-        <div class="titleView">
-          <div class="image is-128x128">
-            <img src="../assets/logo.svg" />
-          </div>
-        <h1 class="title is-1">
-          Kiracoin
-        </h1>
-      </div>
-      </div>
-      <div class="hero-foot">
-      </div>
-    </div>
-  </section>
+  <navbar v-on:navigation="onNavigation" />
+  <hero id="home" />
   <what-is />
-  <about />
-  <road-map />
-  <wallets />
+  <about id="about" />
+  <road-map id="roadmap" />
+  <wallets id="wallets" />
+  <social id="social" />
+  <foot />
 </div>
 </template>
 
 <script>
+import Hero from '@/components/hero'
 import Navbar from '@/components/navbar'
 import WhatIs from '@/components/whatis'
 import About from '@/components/about'
 import RoadMap from '@/components/roadmap'
 import Wallets from '@/components/wallets'
-import particles from '@/components/particles'
+import Social from '@/components/social'
+import Foot from '@/components/foot'
 
 export default {
-  components: { Navbar, WhatIs, particles, About, RoadMap, Wallets },
+  components: {
+    Navbar, WhatIs, About, RoadMap, Wallets, Hero, Social, Foot
+  },
   name: 'Main',
   mounted() {
     document.title = 'Kiracoin'
+  },
+  methods: {
+    onNavigation(item) {
+      const element = document.getElementById(item)
+      this.$SmoothScroll(element)
+    }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-h1.title {
-  font-family: NinjaTurtles;
-}
-
-div.titleView {
-  display: flex;
-  align-items: center;
-  & > h1.title {
-    margin-left: 0.5em;
-    font-size: 5rem;
-  }
-}
-
-.image.is-192x192 {
-  height: 192;
-  width: 192;
-}
-</style>

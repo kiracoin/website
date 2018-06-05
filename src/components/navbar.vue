@@ -4,27 +4,37 @@
      aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <router-link to="/" class="navbar-item title is-4">
+      <a @click="onClick('home')" class="navbar-item title is-4">
       Kiracoin
-      </router-link>
+      </a>
     </div>
     <div class="navbar-end">
-      <a class="navbar-item">
+      <a class="navbar-item" @click="onClick('about')">
         About
       </a>
-      <a class="navbar-item">
+      <a class="navbar-item" @click="onClick('roadmap')">
         Roadmap
       </a>
-      <a class="navbar-item">
+      <a class="navbar-item" @click="onClick('wallets')">
         Wallets
       </a>
-      <a class="navbar-item">
+      <a class="navbar-item" @click="onClick('social')">
         Dev / Repository
       </a>
     </div>
   </div>
 </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    onClick(event) {
+      this.$emit('navigation', event)
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~@/styles/defaults.scss';

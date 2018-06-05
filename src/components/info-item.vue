@@ -1,18 +1,24 @@
 <template>
 <div>
-  <figure class="image is-64x64">
+  <figure class="image is-64x64" v-if="image">
     <a v-if="url" :href="url">
-      <img :src="image" />
+      <img v-if="image" :src="image" />
     </a>
-    <img :src="image" v-else/>
+    <img :src="image" v-else-if="image" />
   </figure>
+  <a :href="url" class="icon is-large" v-else-if="icon && url">
+    <i :class="icon" class="fa-3x"></i>
+  </a>
+  <span class="icon is-large" v-else-if="icon">
+    <i :class="icon" class="fa-3x"></i>
+  </span>
   <h1 class="title is-4">
     <a v-if="url" :href="url">
     {{ title }}
     </a>
     <span v-else>{{ title }}</span>
   </h1>
-  <p>{{ description }}</p>
+  <p v-if="description">{{ description }}</p>
 </div>
 </template>
 
@@ -21,7 +27,11 @@ export default {
   props: {
     image: {
       type: String,
-      required: true
+      default: () => undefined
+    },
+    icon: {
+      type: String,
+      default: () => undefined
     },
     title: {
       type: String,
@@ -29,7 +39,7 @@ export default {
     },
     description: {
       type: String,
-      required: true
+      default: () => undefined
     },
     url: {
       type: String,
@@ -40,6 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon,
 figure.image {
   margin-top: 1.5em;
   margin-bottom: 1.2em;
