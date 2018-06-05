@@ -6,9 +6,9 @@
     </h2>
     <div class="columns">
       <div v-for="(i, index) in info" :key="index" class="column">
-        <info :title="i.title"
-        :image="i.image"
-        :description="i.description" />
+        <info-item :title="i.title"
+                   :image="i.image"
+                   :description="i.description" />
       </div>
     </div>
   </div>
@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import Info from '@/components/info'
+import InfoItem from '@/components/info-item'
 import governanceImage from '@/assets/crowd.svg'
 import x16Image from '@/assets/graphics-card.svg'
 import paymentsImage from '@/assets/payment.svg'
 
 export default {
-  components: { Info },
+  components: { InfoItem },
   name: 'WhatIs',
   data() {
     return {
