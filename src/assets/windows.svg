@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="635px" height="635px" viewBox="0 0 635 635" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#AD0E2D" cx="317.5" cy="317.5" r="317.5"></circle>
+        <g id="004-windows-logo-silhouette" transform="translate(134.000000, 133.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <polygon id="Shape" points="0 319.064154 151 340 151 195 0 195"></polygon>
+            <polygon id="Shape" points="0 176 151 176 151 30 0 50.8243298"></polygon>
+            <polygon id="Shape" points="167 341.331575 368 369 368 195.002326 368 195 167 195"></polygon>
+            <polygon id="Shape" points="167 27.5501562 167 175 368 175 368 0"></polygon>
+        </g>
+    </g>
+</svg>

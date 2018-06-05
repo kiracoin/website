@@ -26,6 +26,7 @@
   <what-is />
   <about />
   <road-map />
+  <wallets />
 </div>
 </template>
 
@@ -34,13 +35,14 @@ import Navbar from '@/components/navbar'
 import WhatIs from '@/components/whatis'
 import About from '@/components/about'
 import RoadMap from '@/components/roadmap'
+import Wallets from '@/components/wallets'
 import particles from '@/components/particles'
 
 export default {
-  components: { Navbar, WhatIs, particles, About, RoadMap },
+  components: { Navbar, WhatIs, particles, About, RoadMap, Wallets },
   name: 'Main',
   mounted() {
-    document.title = 'Home | Kiracoin'
+    document.title = 'Kiracoin'
   }
 }
 </script>

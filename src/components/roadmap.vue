@@ -37,7 +37,7 @@ export default {
         image: documentImage
       }, {
         title: 'Roadmap',
-        description: 'The roadmap for Kiracoin',
+        description: 'Kiracoin development roadmap',
         url: 'https://github.com/kiracoin/roadmap.md',
         image: roadmapImage
       }]

@@ -19,9 +19,6 @@
         Wallets
       </a>
       <a class="navbar-item">
-        Halving
-      </a>
-      <a class="navbar-item">
         Dev / Repository
       </a>
     </div>
